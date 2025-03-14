@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(5, 12, 49);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#gameboard {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(249, 249, 250);
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px black;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: solid 2px black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 10px solid rgb(245, 189, 7);
+    box-sizing: border-box;
+}
+
+.jogadorX {
+    height: 90px;
+    width: 90px;
+    position: relative;
+    transform: rotate(45deg) ;
+}
+
+.jogadorX:before, .jogadorX:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(214, 40, 9);
+}
+
+.jogadorX:before {
+    left: 50%;
+    width: 30%;
+    margin-left: -15%;
+    height: 100%;
+    border-radius: 1em;
+}
+
+.jogadorX:after {
+    top: 50%;
+    height: 30%;
+    margin-top: -15%;
+    width: 100%;
+    border-radius: 1em;
+}
+
+button {
+    padding: 0.5em;
+    margin-top: 2em;
+    border-radius: 5px;
+    background-color: rgb(245, 189, 7);
+}
